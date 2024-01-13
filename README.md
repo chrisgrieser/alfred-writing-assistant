@@ -5,7 +5,7 @@
 Autocorrection and synonym suggestions for the word under the cursor. Rephrasing
 of the selected text. All with one key press.
 
-- [ ] Showcase image to be inserted here.
+<img alt="Writing Assistant Demo" width=70% src="https://github.com/chrisgrieser/alfred-writing-assistant/assets/73286100/e7485a12-875c-426f-a62c-3d273e4d2276">
 
 ## Usage
 The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/):
@@ -18,7 +18,7 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 	+ Additions are displayed as `==highlights==`.
 	+ Deletions are displayed as `~~strikethroughs~~`.
 	+ There is a workflow configuration to alternatively format the changes as
-	  [Critic Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
+	  [Critic Markup](https://fletcher.github.io/MultiMarkdown-6/syntax/critic.html).
 
 ## Installation
 [➡️ Download the latest release.](https://github.com/{{repo}}/releases/latest)
