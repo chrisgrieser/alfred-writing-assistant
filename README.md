@@ -1,8 +1,8 @@
-# {{workflow-name}}
-![Download count](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic)
-![version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
+# alfred writing assistant
+![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-writing-assistant/total?label=Total%20Downloads&style=plastic)
+![version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
 
-{{workflow-description}}
+Autocorrection and synonym suggestions for the word under the cursor. Rephrasing of the selected text. All with one key press.
 
 - [ ] Showcase image to be inserted here.
 
