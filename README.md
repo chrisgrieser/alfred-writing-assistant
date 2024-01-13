@@ -1,15 +1,24 @@
-# alfred writing assistant
+# Writing Assistant for Alfred
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-writing-assistant/total?label=Total%20Downloads&style=plastic)
 ![version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
 
-Autocorrection and synonym suggestions for the word under the cursor. Rephrasing of the selected text. All with one key press.
+Autocorrection and synonym suggestions for the word under the cursor. Rephrasing
+of the selected text. All with one key press.
 
 - [ ] Showcase image to be inserted here.
 
 ## Usage
-- ((Do this)) via the keyword `xxx`.
-- Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
-  to ((do this))
+The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/):
+
+1. Autocorrect the word under the cursor.
+2. Suggest synonyms for the word under the cursor.
+3. Rephrase the selected text via ChatGPT, improving its language (requires
+   OpenAI API key).
+4. Same as 3, but use Markdown markup to show the changes:
+	+ Additions are displayed as `==highlights==`.
+	+ Deletions are displayed as `~~strikethroughs~~`.
+	+ There is a workflow configuration to alternatively format the changes as
+	  [Critic Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
 
 ## Installation
 [➡️ Download the latest release.](https://github.com/{{repo}}/releases/latest)
