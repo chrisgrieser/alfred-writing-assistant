@@ -21,7 +21,7 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 	  [Critic Markup](https://fletcher.github.io/MultiMarkdown-6/syntax/critic.html).
 
 ## Installation
-[➡️ Download the latest release.](https://github.com/{{repo}}/releases/latest)
+[➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-writing-assistant/releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
 workflow-update mechanism.
