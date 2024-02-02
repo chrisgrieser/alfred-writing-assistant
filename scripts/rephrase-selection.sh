@@ -24,7 +24,7 @@ the_prompt=$(echo "$static_prompt $selection" | sed -e 's/"/\\"/g')
 
 # OPENAI API CALL
 # DOCS https://platform.openai.com/docs/api-reference/making-requests
-response=$(curl --silent https://api.openai.com/v1/chat/completions \
+response=$(curl --silent --max-time=0.5 https://api.openai.com/v1/chat/completions \
 	-H "Content-Type: application/json" \
 	-H "Authorization: Bearer $apikey" \
 	-d "{ \"model\": \"$model\", \"messages\": [{\"role\": \"user\", \"content\": \"$the_prompt\"}], \"temperature\": $temperature }")
@@ -33,7 +33,9 @@ response=$(curl --silent https://api.openai.com/v1/chat/completions \
 echo "$response" >&2
 
 # GUARD
-if [[ "$response" =~ "error" || "$response" =~ "ERROR" ]]; then
+if [[ -z "$response" ]]; then
+	echo "ERROR: No response by OpenAI API."
+elif [[ "$response" =~ "error" || "$response" =~ "ERROR" ]]; then
 	# doing this avoids jq dependency
 	echo -n "ERROR: $(echo "$response" | grep '"message"' | cut -d'"' -f4)"
 	exit 1
