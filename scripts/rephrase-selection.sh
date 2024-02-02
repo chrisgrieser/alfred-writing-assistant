@@ -15,13 +15,12 @@ apikey=$alfred_apikey
 # GUARD
 if [[ -z "$apikey" ]]; then
 	echo "⚠️ No API key found."
-	echo "$selection"
-	return 1
+	exit 1
 fi
 
 # WARN `$prompt` is reserved variable in zsh
 # escape quotes in prompt for JSON
-the_prompt=$(echo "$static_prompt $selection" | sed -e "s/\"/'/g")
+the_prompt=$(echo "$static_prompt $selection" | sed -e 's/"/\\"/g')
 
 # OPENAI API CALL
 # DOCS https://platform.openai.com/docs/api-reference/making-requests
@@ -30,9 +29,14 @@ response=$(curl --silent https://api.openai.com/v1/chat/completions \
 	-H "Authorization: Bearer $apikey" \
 	-d "{ \"model\": \"$model\", \"messages\": [{\"role\": \"user\", \"content\": \"$the_prompt\"}], \"temperature\": $temperature }")
 
-if grep -q '"error"' ; then
+# log the response to stderr (= visible in Alfred debug log, but not elsewhere)
+echo "$response" >&2
+
+# GUARD
+if [[ "$response" =~ "error" || "$response" =~ "ERROR" ]]; then
 	# doing this avoids jq dependency
-	text="ERROR: $(echo "$response" | grep '"message"' | cut -d'"' -f4)"
+	echo -n "ERROR: $(echo "$response" | grep '"message"' | cut -d'"' -f4)"
+	exit 1
 else
 	text=$(echo "$response" | grep '"content"' | cut -d'"' -f4)
 fi
@@ -53,11 +57,15 @@ diff=$(git diff --word-diff "$cache/selection.txt" "$cache/rephrased.txt" |
 
 if [[ "$output_type" == "markdown" ]]; then
 	output=$(echo "$diff" |
-	sed -e 's/\[-/~~/g' -e 's/-\]/~~/g' -e 's/{+/==/g' -e 's/+}/==/g')
+		sed -e 's/\[-/~~/g' -e 's/-\]/~~/g' -e 's/{+/==/g' -e 's/+}/==/g')
 elif [[ "$output_type" == "critic-markup" ]]; then
 	output=$(echo "$diff" |
-	sed -e 's/\[-/{--/g' -e 's/-\]/--}/g' -e 's/{+/{++/g' -e 's/+}/++}/g')
+		sed -e 's/\[-/{--/g' -e 's/-\]/--}/g' -e 's/{+/{++/g' -e 's/+}/++}/g')
 fi
 
+# ensure output has same amount of leading/trailing spaces
+[[ "$selection" =~ \ $ ]] && output="$output "
+[[ "$selection" =~ ^\  ]] && output=" $output"
+
 # paste via Alfred
-echo -n "$output"
+echo "$output"
