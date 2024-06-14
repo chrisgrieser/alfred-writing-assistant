@@ -2,8 +2,10 @@
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-writing-assistant/total?label=Total%20Downloads&style=plastic)
 ![Version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
 
-Autocorrection and synonym suggestions for the word under the cursor. Rephrasing
+Autocorrection, synonym suggestions for the word under the cursor, and rephrasing
 of the selected text. All with one key press.
+
+[Recommended by the Alfred Team.](https://www.alfredapp.com/blog/tips-and-tricks/workflows-for-languages-and-reference/)
 
 <img alt="Writing Assistant Demo" width=70% src="https://github.com/chrisgrieser/alfred-writing-assistant/assets/73286100/e7485a12-875c-426f-a62c-3d273e4d2276">
 
