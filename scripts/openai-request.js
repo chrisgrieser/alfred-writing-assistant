@@ -10,20 +10,6 @@ function writeToFile(filepath, text) {
 	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
 }
 
-function ensureCacheFolderExists() {
-	const finder = Application("Finder");
-	const cacheDir = $.getenv("alfred_workflow_cache");
-	if (!finder.exists(Path(cacheDir))) {
-		const cacheDirBasename = $.getenv("alfred_workflow_bundleid");
-		const cacheDirParent = cacheDir.slice(0, -cacheDirBasename.length);
-		finder.make({
-			new: "folder",
-			at: Path(cacheDirParent),
-			withProperties: { name: cacheDirBasename },
-		});
-	}
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
@@ -31,8 +17,6 @@ function ensureCacheFolderExists() {
 function run(argv) {
 	const selection = argv[0]?.trim();
 	if (!selection) return "ERROR: No selection.";
-	ensureCacheFolderExists();
-	const dataCache = $.getenv("alfred_workflow_cache") + "/request-data.json";
 
 	const apiKey =
 		$.NSProcessInfo.processInfo.environment.objectForKey("alfred_apikey").js ||
@@ -51,9 +35,11 @@ function run(argv) {
 		frequency_penalty: frequencyPenalty,
 	};
 
-	// write to file as send request via `--data-binary` to avoid more escaping issues
-	// DOCS https://platform.openai.com/docs/api-reference/chat
+	// write to file as send request via `--data-binary` to avoid escaping issues
+	const dataCache = $.getenv("alfred_workflow_cache") + "/request-data.json";
 	writeToFile(dataCache, JSON.stringify(data));
+
+	// DOCS https://platform.openai.com/docs/api-reference/chat
 	const response = app.doShellScript(
 		`curl --max-time 15 https://api.openai.com/v1/chat/completions \
 		-H 'Content-Type: application/json' \
