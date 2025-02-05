@@ -36,14 +36,19 @@ function run(argv) {
 
 	const apiKey =
 		$.NSProcessInfo.processInfo.environment.objectForKey("alfred_apikey").js ||
-		app.doShellScript('source "$HOME/.zshenv"; echo "$OPENAI_API_KEY"');
+		app.doShellScript('source "$HOME/.zshenv"; echo "$OPENAI_API_KEY"').trim();
 	const prompt = $.getenv("static_prompt") + " " + selection;
+	// Needs division by 10, since Alfred workflow config does not allow setting
+	// decimal values in its number sliders.
 	const temperature = Number.parseInt($.getenv("temperature")) / 10;
+	const frequencyPenalty = Number.parseInt($.getenv("frequency_penalty")) / 10;
 
 	const data = {
 		model: $.getenv("openai_model"),
 		messages: [{ role: "user", content: prompt }],
 		temperature: temperature,
+		// biome-ignore lint/style/useNamingConvention: not defined by me
+		frequency_penalty: frequencyPenalty,
 	};
 
 	// write to file as send request via `--data-binary` to avoid more escaping issues

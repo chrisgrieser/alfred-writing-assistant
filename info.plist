@@ -742,11 +742,36 @@ DOUBLE CLICK TO EDIT</string>
 			<key>config</key>
 			<dict>
 				<key>defaultvalue</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>markercount</key>
-				<integer>11</integer>
+				<integer>41</integer>
 				<key>maxvalue</key>
-				<integer>10</integer>
+				<integer>20</integer>
+				<key>minvalue</key>
+				<integer>-20</integer>
+				<key>onlystoponmarkers</key>
+				<true/>
+				<key>showmarkers</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Frequency Penalty. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>slider</string>
+			<key>variable</key>
+			<string>frequency_penalty</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>defaultvalue</key>
+				<integer>5</integer>
+				<key>markercount</key>
+				<integer>21</integer>
+				<key>maxvalue</key>
+				<integer>20</integer>
 				<key>minvalue</key>
 				<integer>0</integer>
 				<key>onlystoponmarkers</key>
@@ -755,7 +780,7 @@ DOUBLE CLICK TO EDIT</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Temperature ("Creativity"). Value between 0 (more predictable) and 10 (more random).</string>
+			<string>Temperature. Higher values like 8 will make the output more random, while lower values like 2 will make it more focused and deterministic.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
