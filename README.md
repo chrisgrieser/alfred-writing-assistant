@@ -8,7 +8,7 @@ tools. All with one key press.
 
 [Recommended by the Alfred Team.](https://www.alfredapp.com/blog/tips-and-tricks/workflows-for-languages-and-reference/)
 
-<img alt="Writing Assistant Demo" width=70% src="https://github.com/chrisgrieser/alfred-writing-assistant/assets/73286100/e7485a12-875c-426f-a62c-3d273e4d2276">
+<img alt="Writing assistant demo" width=70% src="https://github.com/chrisgrieser/alfred-writing-assistant/assets/73286100/e7485a12-875c-426f-a62c-3d273e4d2276">
 
 ## Usage
 The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/):
@@ -17,8 +17,8 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 2. Suggest synonyms for the word under the cursor.
 3. Rephrase the selected text via ChatGPT, improving its language
 	+ Requires OpenAI API key.
-	+ There are 3 formatting options: Plain, Additions are displayed as
-	  `==highlights==`, deletions are, and [Critic
+	+ There are 3 formatting options: Simply overwrite selection, changes as
+	  Markdown ==highlights== and ~~strikethroughs~~, and [Critic
 	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
 4. Apple Intelligence Writing Tools
 	+ This is just a convenience hotkey to trigger the Writing Tools selection

@@ -778,8 +778,8 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 2. Suggest synonyms for the word under the cursor.
 3. Rephrase the selected text via ChatGPT, improving its language
 	+ Requires OpenAI API key.
-	+ There are 3 formatting options: Plain, Additions are displayed as
-	  `==highlights==`, deletions are, and [Critic
+	+ There are 3 formatting options: Simply overwrite selection, changes as
+	  Markdown ==highlights== and ~~strikethroughs~~, and [Critic
 	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
 4. Apple Intelligence Writing Tools
 	+ This is just a convenience hotkey to trigger the Writing Tools selection
@@ -1160,7 +1160,7 @@ DOUBLE CLICK TO EDIT</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Frequency penalty. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</string>
+			<string>↑ Frequency penalty. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -1185,7 +1185,7 @@ DOUBLE CLICK TO EDIT</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Temperature. Higher values like 8 will make the output more random, while lower values like 2 will make it more focused and deterministic.</string>
+			<string>↑ Temperature. Higher values like 8 will make the output more random, while lower values like 2 will make it more focused and deterministic.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
