@@ -17,8 +17,8 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 2. Suggest synonyms for the word under the cursor.
 3. Rephrase the selected text via ChatGPT, improving its language
 	+ Requires OpenAI API key.
-	+ There are 3 formatting options: Simply overwrite selection, changes as
-	  Markdown ==highlights== and ~~strikethroughs~~, and [Critic
+	+ There are 3 formatting options: Overwrite selection, changes as Markdown
+	  ==highlights== and ~~strikethroughs~~, and [Critic
 	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
 4. Apple Intelligence Writing Tools
 	+ This is just a convenience hotkey to trigger the Writing Tools selection
