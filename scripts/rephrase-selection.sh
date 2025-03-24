@@ -28,14 +28,8 @@ fi
 echo "$selection" > "$cache/selection.txt"
 echo "$rephrased" > "$cache/rephrased.txt"
 
-# https://unix.stackexchange.com/questions/677764/show-differences-in-strings
-if [[ "$diff_type" == "word" ]] ; then
-	diff=$(git diff --word-diff "$cache/selection.txt" "$cache/rephrased.txt" |
-		sed -e "1,5d")
-elif [[ "$diff_type" == "character" ]] ; then
-	diff=$(git diff --word-diff-regex=. "$cache/selection.txt" "$cache/rephrased.txt" |
-		sed -e "1,5d")
-fi
+diff=$(git diff --word-diff-regex='[[:punct:]]|[^[:space:][:punct:]]+' \
+	"$cache/selection.txt" "$cache/rephrased.txt" | sed -e "1,5d")
 
 if [[ "$output_type" == "markdown" ]]; then
 	output=$(echo "$diff" |
