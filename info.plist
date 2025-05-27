@@ -286,11 +286,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>47</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1048576</integer>
-				<key>hotstring</key>
-				<string>.</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -361,11 +359,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>33</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1048576</integer>
-				<key>hotstring</key>
-				<string>Ü</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -500,11 +496,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>14</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
-				<key>hotstring</key>
-				<string>E</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -649,11 +643,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>13</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
-				<key>hotstring</key>
-				<string>W</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -777,7 +769,7 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 1. Autocorrect the word under the cursor.
 2. Suggest synonyms for the word under the cursor.
 3. Rephrase the selected text via ChatGPT, improving its language
-	+ Requires OpenAI API key.
+	+ Requires an OpenAI API key.
 	+ There are 3 formatting options: Overwrite selection, changes as
 	  Markdown ==highlights== and ~~strikethroughs~~, and [Critic
 	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
@@ -1083,33 +1075,21 @@ DOUBLE CLICK TO EDIT</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>gpt-4o-mini</string>
+				<string>gpt-4.1-nano</string>
 				<key>pairs</key>
 				<array>
 					<array>
-						<string>o1</string>
-						<string>o1</string>
+						<string>GPT 4.1 nano</string>
+						<string>gpt-4.1-nano</string>
 					</array>
 					<array>
-						<string>GPT-4o</string>
-						<string>gpt-4o</string>
-					</array>
-					<array>
-						<string>o1 mini</string>
-						<string>o1-mini</string>
-					</array>
-					<array>
-						<string>GPT-4o mini</string>
-						<string>gpt-4o-mini</string>
-					</array>
-					<array>
-						<string>GPT-3.5 Turbo (deprecated)</string>
-						<string>gpt-3.5-turbo</string>
+						<string>GPT 4.1 mini</string>
+						<string>gpt-4.1-mini</string>
 					</array>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>OpenAI model. The list is roughly sorted by price/capability, meaning the most expensive but also most capable model is at the top. For prices and more information, see https://platform.openai.com/docs/models</string>
+			<string>OpenAI model. The mini model is higher quality, but more expensive. The nano model is cheaper and quicker. For more information, see https://platform.openai.com/docs/models</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>

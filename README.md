@@ -16,7 +16,7 @@ The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/trig
 1. Autocorrect the word under the cursor.
 2. Suggest synonyms for the word under the cursor.
 3. Rephrase the selected text via ChatGPT, improving its language
-	+ Requires OpenAI API key.
+	+ Requires an OpenAI API key.
 	+ There are 3 formatting options: Overwrite selection, changes as Markdown
 	  ==highlights== and ~~strikethroughs~~, and [Critic
 	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
@@ -36,7 +36,7 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-- [Academic Website](https://chris-grieser.de/)
+- [Website](https://chris-grieser.de/)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
