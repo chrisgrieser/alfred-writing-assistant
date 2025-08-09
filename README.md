@@ -3,8 +3,7 @@
 ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query=writing-assistant&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
 
-Autocorrection, synonym suggestions, and Apple Intelligence writing tools with
-one hotkey.
+Autocorrection, synonym suggestions, and Apple Intelligence Writing Tools.
 
 [Recommended by the Alfred Team.](https://www.alfredapp.com/blog/tips-and-tricks/workflows-for-languages-and-reference/)
 
@@ -27,11 +26,7 @@ The workflow offers three [hotkeys](https://www.alfredapp.com/help/workflows/tri
 
 1. Autocorrect the word under the cursor.
 2. Suggest synonyms for the word under the cursor.
-3. Apple Intelligence Writing Tools
-	+ A convenience hotkey to trigger the Writing Tools selection via keyboard,
-	  it works the same as if you click the item in `Edit` → `Writing Tools`.
-	+ Note that Apple Intelligence availability depends on your country, your
-	  macOS version, and the app.
+3. Invoke `Apple Intelligence Writing Tools`.
 
 ## Installation
 [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-writing-assistant/releases/latest)
