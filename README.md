@@ -3,27 +3,33 @@
 ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query=writing-assistant&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
 
-Autocorrection, synonym suggestions, rephrasing, and Apple Intelligence writing
-tools. All with one key press.
+Autocorrection, synonym suggestions, and Apple Intelligence writing tools with
+one hotkey.
 
 [Recommended by the Alfred Team.](https://www.alfredapp.com/blog/tips-and-tricks/workflows-for-languages-and-reference/)
 
 <img alt="Writing assistant demo" width=70% src="https://github.com/chrisgrieser/alfred-writing-assistant/assets/73286100/e7485a12-875c-426f-a62c-3d273e4d2276">
 
+## Version 2.0: Removal of the ChatGPT Rephraser
+Since Apple Intelligence has become more available, and is—at least for
+proofreading tasks—as competent as ChatGPT, the Rephraser has become obsolete.
+
+If you want to continue using the `Rephraser`, you can download [the last
+version of the workflow that still supports
+it](https://github.com/chrisgrieser/alfred-writing-assistant/releases/tag/1.8.1).
+
+If you use Obsidian, you can also use the [Obsidian Proofreader
+Plugin](https://github.com/chrisgrieser/obsidian-proofreader) which does proper
+inline suggestions.
+
 ## Usage
-The workflow offers four [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/):
+The workflow offers three [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/):
 
 1. Autocorrect the word under the cursor.
 2. Suggest synonyms for the word under the cursor.
-3. Rephrase the selected text via ChatGPT, improving its language
-	+ Requires an OpenAI API key.
-	+ There are 3 formatting options: Overwrite selection, changes as Markdown
-	  ==highlights== and ~~strikethroughs~~, and [Critic
-	  Markup](https://github.com/CriticMarkup/CriticMarkup-toolkit).
-4. Apple Intelligence Writing Tools
-	+ This is just a convenience hotkey to trigger the Writing Tools selection
-	  via keyboard, it works the same as if you click the item in `Edit` →
-	  `Writing Tools`.
+3. Apple Intelligence Writing Tools
+	+ A convenience hotkey to trigger the Writing Tools selection via keyboard,
+	  it works the same as if you click the item in `Edit` → `Writing Tools`.
 	+ Note that Apple Intelligence availability depends on your country, your
 	  macOS version, and the app.
 
