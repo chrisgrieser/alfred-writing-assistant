@@ -15,7 +15,7 @@ proofreading tasks—as competent as ChatGPT, the Rephraser has become obsolete.
 
 If you want to continue using the `Rephraser`, you can download [the last
 version of the workflow that still supports
-it](https://github.com/chrisgrieser/alfred-writing-assistant/releases/tag/1.8.1).
+it](https://github.com/chrisgrieser/alfred-writing-assistant/releases/tag/1.8.0).
 
 If you use Obsidian, you can also use the [Obsidian Proofreader
 Plugin](https://github.com/chrisgrieser/obsidian-proofreader) which does proper
