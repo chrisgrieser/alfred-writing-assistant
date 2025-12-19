@@ -1,4 +1,4 @@
-# Writing Assistant for Alfred
+# Writing assistant for Alfred
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-writing-assistant/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query=writing-assistant&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-writing-assistant?label=Latest%20Release&style=plastic)
